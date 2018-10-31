@@ -1,5 +1,4 @@
 <h2>Listagem</h2>
-
 <div class="table-responsive">
   <table class="table table-bordered table-sm">
     <thead class="thead-dark">
@@ -16,25 +15,25 @@
     <tbody>
       <tr *ngFor="let lancamento of lancamentos; let lancamento = index">
         <td class="text-center">
-          <small>{{lancamento.dataEfetivaLancamento | date: 'dd/MM/yyyy'}}</small>
+          <small>{{lancamento.dataDeLancamento}}</small>
         </td>
         <td class="text-center">
-          <small>{{lancamento.lancamentoContaCorrenteCliente.nomeTipoOperacao}}</small>
+          <small>{{lancamento.descricao}}</small>
         </td>
         <td class="text-center">
-          <small>{{lancamento.lancamentoContaCorrenteCliente.numeroRemessaBanco}}</small>
+          <small>{{lancamento.numero}}</small>
         </td>
         <td class="text-center">
-          <small>{{lancamento.lancamentoContaCorrenteCliente.nomeSituacaoRemessa}}</small>
+          <small>{{lancamento.situacao}}</small>
         </td>
         <td class="text-center">
-          <small>{{lancamento.dataLancamentoContaCorrenteCliente | date: 'dd/MM/yyyy'}}</small>
+          <small>{{lancamento.dataDeConfirmacao}}</small>
         </td>
         <td class="text-center">
-          <small>{{lacamento.nomeBanco}}</small>
+          <small>{{lancamento.dadosBancarios}}</small>
         </td>
         <td class="text-right">
-          <small>{{lacamento.valorLancamentoRemessa | currency: 'R$ '}}</small>
+          <small>{{lancamento.valorFinal | currency: 'R$ '}}</small>
         </td>
       </tr>
     </tbody>
